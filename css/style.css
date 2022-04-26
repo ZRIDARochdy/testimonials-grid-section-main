@@ -46,9 +46,88 @@ body {
 	font-family: var(--ff);
 	font-size: var(--fs-body);
 	width: min(100% - 2rem, 90rem);
-	height: calc(100vh - 1px);
-	margin-inline: auto;
+	min-height: calc(100vh - 1px);
+	margin: 1rem auto;
 	display: grid;
 	place-content: center;
+	background-color: var(--Light-gray);
 	color: var(--Very-dark-blackish-blue);
+}
+
+/* ====================================================== */
+/* ==================== Mobile Style =================== */
+/* ====================================================== */
+
+.testimonial {
+	display: grid;
+	grid-template-columns: 1fr;
+    grid-template-areas: 
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+    ;
+	gap: 1rem;
+}
+.card:nth-of-type(1){
+    grid-area: card1;
+}
+.card:nth-of-type(2){
+    grid-area: card2;
+}
+.card:nth-of-type(3){
+    grid-area: card3;
+}
+.card:nth-of-type(4){
+    grid-area: card4;
+}
+.card:nth-of-type(5){
+    grid-area: card5;
+}
+.card {
+	background-color: var(--White);
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+.card figure {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+.card figure img {
+	width: 35px;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	border: 2px solid hsla(0, 0%, 100%, 0.5);
+	border-radius: 50%;
+}
+.name,
+.status {
+	margin-block: 0;
+}
+.status {
+	opacity: 50%;
+}
+.card blockquote {
+	opacity: 70%;
+}
+
+/* ~~~~~~~~~~~~~ Utilities Style ~~~~~~~~~~~~~ */
+
+.violet_card {
+    background-color: var(--Moderate-violet);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 1rem right 1rem;
+	color: var(--White);
+}
+.blackish-blue {
+	background-color: var(--Very-dark-blackish-blue);
+	color: var(--White);
+}
+.grayish-blue {
+	background-color: var(--Moderate-grayish-blue);
+	color: var(--White);
 }
