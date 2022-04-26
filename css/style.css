@@ -60,6 +60,7 @@ body {
 /* ====================================================== */
 
 .testimonial {
+	max-width: 90rem;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-areas:
@@ -68,7 +69,7 @@ body {
 		'card3'
 		'card4'
 		'card5';
-	gap: 1rem;
+	gap: 1.6rem;
 }
 .card:nth-of-type(1) {
 	grid-area: card1;
@@ -89,6 +90,7 @@ body {
 	background-color: var(--White);
 	padding: 1rem;
 	border-radius: 0.5rem;
+	box-shadow: 5px 5px 5px hsla(217, 19%, 35%, 0.2);
 }
 
 .card figure {
@@ -98,14 +100,15 @@ body {
 }
 .card figure img {
 	width: 35px;
-	aspect-ratio: 1 / 1;
+	aspect-ratio: 1;
 	object-fit: cover;
-	border: 2px solid hsla(0, 0%, 100%, 0.5);
+	border: 2px solid hsla(210, 46%, 95%, 0.8);
 	border-radius: 50%;
 }
 .name,
 .status {
 	margin-block: 0;
+	
 }
 .status {
 	opacity: 50%;
@@ -127,7 +130,7 @@ body {
 	}
 }
 
-/**!Test for more responsive  */
+/**!Test for more responsive design */
 
 /* @media only screen and (min-width:31.25em) and (max-width: 89.99875em) {
 	.testimonial {
@@ -153,7 +156,8 @@ body {
 	background-color: var(--Moderate-violet);
 	background-image: url(/images/bg-pattern-quotation.svg);
 	background-repeat: no-repeat;
-	background-position: top 1rem right 1rem;
+	background-position: top 0 right 3rem;
+	background-size: 19%;
 	color: var(--White);
 }
 .blackish-blue {
