@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;1,500&display=swap');
+
+/* ~~~~~~~~~~~~~ Variables Style ~~~~~~~~~~~~~ */
+
+:root {
+	--ff: 'Barlow Semi Condensed', sans-serif;
+	--fs-body: 0.8125rem;
+	--fw-500: 500;
+	--fw-600: 600;
+	--Moderate-violet: hsl(263, 55%, 52%);
+	--Moderate-grayish-blue: hsl(217, 19%, 35%);
+	--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+	--White: hsl(0, 0%, 100%);
+	--Light-gray: hsl(0, 0%, 81%);
+	--Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+/* ~~~~~~~~~~~~~ Reset Style ~~~~~~~~~~~~~ */
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+blockquote {
+	margin-block: 1rem;
+}
+
+h2 {
+	font-weight: var(--fw-600);
+}
+h3 {
+	font-weight: var(--fw-500);
+}
+
+/* ~~~~~~~~~~~~~ General Style ~~~~~~~~~~~~~ */
+
+body {
+	font-family: var(--ff);
+	font-size: var(--fs-body);
+	width: min(100% - 2rem, 90rem);
+	height: calc(100vh - 1px);
+	margin-inline: auto;
+	display: grid;
+	place-content: center;
+	color: var(--Very-dark-blackish-blue);
+}
