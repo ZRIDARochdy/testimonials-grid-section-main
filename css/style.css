@@ -33,9 +33,10 @@ blockquote {
 	margin-block: 1rem;
 }
 
-h2 {
+/* h2 {
 	font-weight: var(--fw-600);
-}
+} */
+h2,
 h3 {
 	font-weight: var(--fw-500);
 }
@@ -61,29 +62,28 @@ body {
 .testimonial {
 	display: grid;
 	grid-template-columns: 1fr;
-    grid-template-areas: 
-        "card1"
-        "card2"
-        "card3"
-        "card4"
-        "card5"
-    ;
+	grid-template-areas:
+		'card1'
+		'card2'
+		'card3'
+		'card4'
+		'card5';
 	gap: 1rem;
 }
-.card:nth-of-type(1){
-    grid-area: card1;
+.card:nth-of-type(1) {
+	grid-area: card1;
 }
-.card:nth-of-type(2){
-    grid-area: card2;
+.card:nth-of-type(2) {
+	grid-area: card2;
 }
-.card:nth-of-type(3){
-    grid-area: card3;
+.card:nth-of-type(3) {
+	grid-area: card3;
 }
-.card:nth-of-type(4){
-    grid-area: card4;
+.card:nth-of-type(4) {
+	grid-area: card4;
 }
-.card:nth-of-type(5){
-    grid-area: card5;
+.card:nth-of-type(5) {
+	grid-area: card5;
 }
 .card {
 	background-color: var(--White);
@@ -114,13 +114,46 @@ body {
 	opacity: 70%;
 }
 
+/* ====================================================== */
+/* ==================== Desktop Style =================== */
+/* ====================================================== */
+
+@media only screen and (min-width: 31.25em) {
+	.testimonial {
+		grid-template-columns: repeat(4, minmax(auto, 38ch));
+		grid-template-areas:
+			'card1 card1 card2 card5'
+			'card3 card4 card4 card5';
+	}
+}
+
+/**!Test for more responsive  */
+
+/* @media only screen and (min-width:31.25em) and (max-width: 89.99875em) {
+	.testimonial {
+		grid-template-columns: repeat(2,  minmax(auto, 1fr));
+		grid-template-areas:
+			'card1 card2'
+			'card3 card4'
+			'card5 card5';
+	}
+} */
+/* @media only screen and (min-width: 90em) {
+	.testimonial {
+		grid-template-columns: repeat(4,  minmax(auto, 250px));
+		grid-template-areas:
+			'card1 card1 card2 card5'
+			'card3 card4 card4 card5';
+	}
+} */
+
 /* ~~~~~~~~~~~~~ Utilities Style ~~~~~~~~~~~~~ */
 
 .violet_card {
-    background-color: var(--Moderate-violet);
-    background-image: url(/images/bg-pattern-quotation.svg);
-    background-repeat: no-repeat;
-    background-position: top 1rem right 1rem;
+	background-color: var(--Moderate-violet);
+	background-image: url(/images/bg-pattern-quotation.svg);
+	background-repeat: no-repeat;
+	background-position: top 1rem right 1rem;
 	color: var(--White);
 }
 .blackish-blue {
